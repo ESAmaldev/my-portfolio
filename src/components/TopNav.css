@@ -1,0 +1,29 @@
+.topnav {
+    background-color: #444;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100% ;
+  }
+  
+  .topnav a {
+    flex: 1;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 0px 4%; 
+    text-decoration: none;
+    font-size: 35px;
+    box-sizing: border-box;
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+
+  .icon
+  {
+    width:35px;
+    height:35px;
+  }
