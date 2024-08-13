@@ -1,0 +1,52 @@
+.educationdiv{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size:cover;
+  font-style: italic;
+  color: chartreuse;
+  background: rgba(0, 0, 0, 0.1);
+  
+  }
+
+.degree1 {
+  flex: 1;
+  margin-right: 20px;  
+  background: rgba(170, 188, 226, 0.5);
+  padding: 20px;
+  border-radius: 20rem;
+  }
+  
+  .degree2 {
+    flex: 0 0 50%;
+    background: rgba(170, 188, 226, 0.5);
+    padding: 20px;
+    border-radius: 20rem;
+  }
+
+  .image {
+    height: 60%; 
+    width: 90%;
+  }
+
+  .courses {
+    margin-top: 10px;
+  }
+  
+  .courses ul {
+    list-style-type: none;
+  }
+  .courses p{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+  .courses li{
+    font-size: 1rem !important;
+  }
+  .uni{
+    background: linear-gradient(90.21deg, rgba(192, 188, 191, 0.5) -5.91%, rgba(95, 75, 175, 0.5) 111.58%) !important;
+    border-radius: 5px;
+    font-size: 1rem !important;
+  }
+  
+  

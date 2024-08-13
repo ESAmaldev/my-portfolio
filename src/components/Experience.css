@@ -1,0 +1,66 @@
+.experiencediv
+{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size:cover;
+  font-style: italic;
+  color: chartreuse;
+  background: rgba(0, 0, 0, 0.1);
+  padding: 2%;
+  
+  }
+
+.section
+{
+    background: rgba(0, 0, 0, 0);
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.job1 {    
+    background-color: #0a1752;
+    padding: 20px;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(145, 53, 53, 0.1);  
+    
+  }
+
+  .job2 {
+    background-color: #0a1752;
+    padding: 20px;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(145, 53, 53, 0.1);
+    
+  }
+
+  .job3 {
+    background-color: #0a1752;
+    padding: 20px;
+    border-radius: 20rem;
+    box-shadow: 0 0 10px rgba(145, 53, 53, 0.1);
+    
+  }
+  
+  .job {
+    margin-top: 10px;
+  }
+  
+  .job ul {
+    list-style-type: none;
+  }
+  .job p{
+    margin-bottom: 0;
+    font-size: 1.5rem;
+  }
+  .job li{
+    font-size: 1rem !important;    
+    text-align: center;
+  }
+  .exp{
+    background: linear-gradient(90.21deg, rgba(192, 188, 191, 0.5) -5.91%, rgba(95, 75, 175, 0.5) 111.58%) !important;
+    border-radius: 5px;
+    font-size: 1rem !important;
+  }
+  

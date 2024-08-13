@@ -1,11 +1,13 @@
-body {	 background-color: #000000;
-  background-image: url("https://png.pngtree.com/background/20210714/original/pngtree-futuristic-shape-abstract-background-chemistry-technology-concept-for-website-picture-image_1250295.jpg");
-background-repeat: no-repeat;
-background-attachment: fixed;
-background-position: center; 
-background-size:cover;
+.App
+{	 background-color: #000000;
+    background-image: url("components/static/bg.jpg");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size:cover;
+  
+  }
 
-}
 
 .App-logo {
   height: 40vmin;
@@ -19,14 +21,11 @@ background-size:cover;
 }
 
 .Contenth {
-  background: rgba(0, 0, 0, 0.5);
-  color: #0FFFFF;
   margin:0;
   width: auto;
   position: center;
   text-align: center;
   font-size: 125%;
-  padding: 20px;
 }
 
 @keyframes App-logo-spin {

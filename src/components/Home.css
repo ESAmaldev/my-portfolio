@@ -1,0 +1,43 @@
+.homediv
+{
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center; 
+  background-size:cover;
+  font-style: italic;
+  color: chartreuse;
+  padding: 2%;
+  
+  }
+
+.section
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.content {
+  flex: 1;
+  margin-right: 20px;  
+}
+
+.contentText {   
+    margin:0;
+    width: auto;
+    position: center;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 20px;
+    border-radius: 5rem;
+  }
+  
+  .imageBox {
+    flex: 0 0 45%;
+  }
+
+  .image {
+    height: 60%; 
+    width: 90%;    
+    border-radius: 1rem;
+  }
