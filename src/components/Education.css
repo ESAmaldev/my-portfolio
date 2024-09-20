@@ -1,27 +1,29 @@
 .educationdiv{
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
-  background-size:cover;
+  height: 100%;
   font-style: italic;
-  color: chartreuse;
-  background: rgba(0, 0, 0, 0.1);
+  color: white;
+  background: rgb(173, 50, 126);
   
   }
 
 .degree1 {
   flex: 1;
-  margin-right: 20px;  
+  text-align: left;
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 5rem;  
+  margin-bottom: 5rem;
   background: rgba(170, 188, 226, 0.5);
-  padding: 20px;
-  border-radius: 20rem;
   }
   
   .degree2 {
-    flex: 0 0 50%;
+    flex: 0 0 50%;  
+    text-align: left; 
+    margin-left: 2rem;
+    margin-right: 2rem;      
+    margin-top: 5rem;  
+    margin-bottom: 5rem;
     background: rgba(170, 188, 226, 0.5);
-    padding: 20px;
-    border-radius: 20rem;
   }
 
   .image {
@@ -33,9 +35,7 @@
     margin-top: 10px;
   }
   
-  .courses ul {
-    list-style-type: none;
-  }
+
   .courses p{
     margin-bottom: 0;
     font-size: 1.5rem;
@@ -49,4 +49,34 @@
     font-size: 1rem !important;
   }
   
-  
+  /* Styling the h1 with word art animation */
+h1.word-art {
+  font-style: italic;
+  font-family: 'Arial', sans-serif;      /* Use a simple font for the base */
+  font-size: 5rem;                      /* Adjust font size */
+  color: yellow;                       /* Primary color */
+  text-align: center;                   /* Center the text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), /* Basic shadow */
+               4px 4px 6px rgba(0, 0, 0, 0.3), /* Double shadow for depth */
+               6px 6px 8px rgba(0, 0, 0, 0.2); /* Triple shadow for more depth */
+  animation: wordArtAnimation 3s infinite; /* Add animation to the text */
+}
+
+/* Keyframes for text animation */
+@keyframes wordArtAnimation {
+  0% {
+    transform: scale(1);                 /* Initial scale */
+    color: rgb(17, 1, 9);                      /* Initial color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.3), 6px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+  50% {
+    transform: scale(1.5);               /* Slightly enlarge the text */
+    color: rgb(155, 79, 150);                       /* Change color midway */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), 6px 6px 12px rgba(0, 0, 0, 0.4), 10px 10px 16px rgba(0, 0, 0, 0.3);
+  }
+  100% {
+    transform: scale(1);                 /* Return to original scale */
+    color: rgb(0, 56, 168);                       /* Return to original color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.3), 6px 6px 8px rgba(0, 0, 0, 0.2);
+  }
+}

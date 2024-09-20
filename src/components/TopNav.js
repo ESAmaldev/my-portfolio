@@ -1,18 +1,22 @@
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
 import './TopNav.css';
+import React, { useState } from 'react';
 
-function TopNav() {
+const TopNav = () => {
+  const [isNavOpen, setIsNavOpen] = useState(false);
+
+  const toggleNav = () => {
+    setIsNavOpen(!isNavOpen);
+  };
+
   return (
-
-    <div class="topNav">
-  <a class="active" href="#home"><h1>Home</h1></a> 
-  <a class="active" href="#education">Education</a> 
-  <a class="active" href="#experience">Experience</a> 
-</div> 
-   
+    <div className={`topNav ${isNavOpen ? 'responsive' : ''}`}>
+      <span className="hamburger" onClick={toggleNav}>
+        &#9776; {/* This is the hamburger icon (≡) */}
+      </span>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </div>
   );
 }
 

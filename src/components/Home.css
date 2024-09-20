@@ -1,12 +1,9 @@
 .homediv
 {
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: center; 
-  background-size:cover;
+  padding-top: 5rem;
+  background-color: #0cd5f4;
   font-style: italic;
   color: chartreuse;
-  padding: 2%;
   
   }
 
@@ -17,10 +14,6 @@
     align-items: flex-start;
 }
 
-.content {
-  flex: 1;
-  margin-right: 20px;  
-}
 
 .contentText {   
     margin:0;
@@ -31,13 +24,60 @@
     padding: 20px;
     border-radius: 5rem;
   }
+
+  .contentIcon {
+    margin:0;
+    width: auto;
+    position: center;
+    text-align: center;
+    font-size: 125%;
+    margin-bottom: 5rem;
+  }
   
-  .imageBox {
-    flex: 0 0 45%;
+  
+  .image {    
+    border-radius: 1rem;
   }
 
-  .image {
-    height: 60%; 
-    width: 90%;    
-    border-radius: 1rem;
+  /* src/components/AnimatedText.css */
+.container {
+  perspective: 1000px; /* Perspective effect for 3D */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Full height of the viewport */
+  background-color: #282c34; /* Background color for better visibility */
+}
+
+  /* Styling the h1 with word art animation */
+  h1.word-art {
+    font-style: normal;
+    font-family: 'Arial', sans-serif;      /* Use a simple font for the base */
+    font-size: 5rem;                      /* Adjust font size */
+    color: yellow;                       /* Primary color */
+    text-align: center;                   /* Center the text */
+    margin-top: 50px;                     /* Space it from the top */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), /* Basic shadow */
+                 4px 4px 6px rgba(0, 0, 0, 0.3), /* Double shadow for depth */
+                 6px 6px 8px rgba(0, 0, 0, 0.2); /* Triple shadow for more depth */
+    animation: wordArtAnimation 3s infinite; /* Add animation to the text */
+  }
+  
+  /* Keyframes for text animation */
+  @keyframes wordArtAnimation {
+    0% {
+      transform: scale(1);                 /* Initial scale */
+      color: rgb(214, 2, 112);                      /* Initial color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.3), 6px 6px 8px rgba(0, 0, 0, 0.2);
+    }
+    50% {
+      transform: scale(1.2);               /* Slightly enlarge the text */
+      color: rgb(155, 79, 150);                       /* Change color midway */
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5), 6px 6px 12px rgba(0, 0, 0, 0.4), 10px 10px 16px rgba(0, 0, 0, 0.3);
+    }
+    100% {
+      transform: scale(1);                 /* Return to original scale */
+      color: rgb(0, 56, 168);                       /* Return to original color */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4), 4px 4px 6px rgba(0, 0, 0, 0.3), 6px 6px 8px rgba(0, 0, 0, 0.2);
+    }
   }
