@@ -11,23 +11,17 @@ function App() {
     <div className="App">
       <header>
       < TopNav />
-      <br></br>
   </header>
       
       <div className="Contenth">
-        <br></br>
       <div id="home">
         <Home />
         </div>
-        <br></br>
-        <br></br>
         <div id="education">
 
         <Education />
         
 </div>
-<br></br>
-<br></br>
 <div id="experience">
 
 <Experience />

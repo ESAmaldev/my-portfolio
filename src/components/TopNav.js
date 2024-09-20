@@ -1,5 +1,5 @@
-import './TopNav.css';
 import React, { useState } from 'react';
+import './TopNav.css'; 
 
 const TopNav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
@@ -14,8 +14,8 @@ const TopNav = () => {
         &#9776; {/* This is the hamburger icon (≡) */}
       </span>
       <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
     </div>
   );
 }
