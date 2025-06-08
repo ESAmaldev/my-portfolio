@@ -20,6 +20,8 @@ function Home() {
                 <br></br>
                 <h4>As an experienced IT Professional with over three years in full-stack development and technical support, I possess a strong background in designing and developing scalable web applications, creating RESTful APIs, and enhancing system performance. My technical expertise spans multiple programming languages and frameworks, including Java, Spring Boot, Python, Django, and React. I am also skilled at AWS, SQL and NoSQL databases.</h4>
                 <br></br>  
+                <h6 class="h6-partial-color"> <span> Skills: </span> Python, Django, Flask, Java, Spring, React, JavaScript, DSA, AWS, Problem solving, SQL, DBMS, mongoDB, Git. </h6>
+                <h6 class="h6-partial-color"> <span> Certifications: </span> <a href="https://www.coursera.org/account/accomplishments/verify/HLT7C5A0SEJI"> Django,</a> <a href="https://www.linkedin.com/learning/certificates/b4a29e3ad6da4cc4f0bf6eb351b4853a60bebfd7260d0c838aabfad510d5519e"> JavaScript</a> </h6>
                 </div> 
                 <div className="contentIcon">     
                 <a href="https://github.com/ESAmaldev" target="_blank" rel="noopener noreferrer"><img src={github} alt="" /></a>

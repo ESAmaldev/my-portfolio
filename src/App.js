@@ -13,22 +13,21 @@ function App() {
       < TopNav />
   </header>
       
-      <div className="Contenth">
-      <div id="home">
-        <Home />
-        </div>
-        <div id="education">
+          <div id="home">
+            <Home />
+          </div>
+         <div id="education">
 
-        <Education />
+           <Education />
         
-</div>
-<div id="experience">
+         </div>
+        
+          <div id="experience">
 
-<Experience />
-      
+            <Experience />
+        
+          </div>
         </div>
-        </div>
-    </div>
   );
 }
 

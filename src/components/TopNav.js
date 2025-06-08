@@ -11,7 +11,7 @@ const TopNav = () => {
   return (
     <div className={`topNav ${isNavOpen ? 'responsive' : ''}`}>
       <span className="hamburger" onClick={toggleNav}>
-        &#9776; {/* This is the hamburger icon (≡) */}
+        &#9776; {}
       </span>
       <a href="#home">Home</a>
       <a href="#education">Education</a>

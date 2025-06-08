@@ -12,7 +12,7 @@ function Experience() {
         <Row className="section">
         <Col xs={10} md={6} xl={6} className="jobCol1">
         <div className="job1">
-            <h4>Software Developer/Technical manager</h4>
+            <h4>Software Developer</h4>
             <span className="exp">Tech stack: Python, Django, PyTest, Docker, SQL, AWS, Git</span>
                                 <div className="job">
                                 <h5> Amlire, Kochi </h5>

@@ -28,13 +28,30 @@
     display: none; /* Hide all links */
   }
 
+ 
+  /* Default styles - hide hamburger on large screens */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger only on small screens */
+@media screen and (max-width: 768px) {
   .hamburger {
-    display: contents;
-    font-size: 3rem;
-    color: white;
+    display: inline-block;
     cursor: pointer;
-    padding: 1rem;
+    /* Add any additional styling you want for the hamburger */
   }
+  
+  /* This assumes you want to hide regular nav items when hamburger is shown */
+  .topNav a {
+    display: none;
+  }
+  
+  /* Show the nav items when menu is open */
+  .topNav.responsive a {
+    display: block;
+  }
+}
 
   .topNav.responsive {
     position: fixed;
@@ -48,4 +65,29 @@
     padding: 1rem;
     font-size: 2rem;
   }
+
+
+  /* Default styles - hide hamburger on large screens */
+.hamburger {
+  display: none;
+}
+
+/* Show hamburger only on small screens */
+@media screen and (max-width: 768px) {
+  .hamburger {
+    display: inline-block;
+    cursor: pointer;
+    /* Add any additional styling you want for the hamburger */
+  }
+  
+  /* This assumes you want to hide regular nav items when hamburger is shown */
+  .topNav a {
+    display: none;
+  }
+  
+  /* Show the nav items when menu is open */
+  .topNav.responsive a {
+    display: block;
+  }
+}
 }
