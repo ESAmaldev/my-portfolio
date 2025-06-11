@@ -15,6 +15,13 @@
     align-items: flex-start;
 }
 
+
+.imageBox
+{
+    align-items: flex-start;
+}
+
+
 .h6-partial-color span {
   color: #aa8f2d;
 }
@@ -24,10 +31,15 @@
     width: auto;
   font-family: 'Franklin Gothic Medium';
     position: center;
-    text-align: center;
+  text-align: left;
     background: rgba(0, 0, 0, 0.3);
     padding: 20px;
-    border-radius: 5rem;
+    border-radius: 2.25rem;
+  }
+
+  .about {
+
+    text-align: left;
   }
 
   .contentIcon {
@@ -53,7 +65,7 @@
   margin: 1rem auto; /* Smaller margin on mobile */
   letter-spacing: 0.15em; /* Adjust spacing between letters */
   animation: 
-    typing 3.5s steps(40, end),
+    typing 1.75s steps(25, end),
     blink-caret 0.75s step-end infinite;
 }
 
