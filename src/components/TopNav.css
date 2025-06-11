@@ -1,11 +1,18 @@
 /* Base styling for the topNav */
 .topNav {
-  background-color: rgb(42, 8, 25);
+  background-color: transparent;
   position: fixed;
   padding-top: 1rem;
   width: 100%;
   z-index: 1000;
   top: 0;
+  transition: background-color 0.3s ease, padding 0.3s ease;
+}
+
+/* Scrolled state - becomes visible */
+.topNav.scrolled {
+  background-color: rgb(42, 8, 25);
+  padding: 0.5rem 0; /* Slightly reduce padding when scrolled */
 }
 
 .topNav a {
@@ -15,6 +22,7 @@
   font-size: 2rem;
   color: white;
   text-decoration: none;
+  transition: all 0.3s ease;
 }
 
 .topNav a:hover {
@@ -22,72 +30,49 @@
   color: black;
 }
 
-/* Media query to hide nav links and show only one button on smaller screens */
-@media screen and (max-width: 768px) {
-  .topNav a {
-    display: none; /* Hide all links */
-  }
-
- 
-  /* Default styles - hide hamburger on large screens */
+/* Hamburger menu icon */
 .hamburger {
   display: none;
+  color: white;
+  font-size: 2.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+  top: 0;
 }
 
-/* Show hamburger only on small screens */
+/* Mobile styles */
 @media screen and (max-width: 768px) {
-  .hamburger {
-    display: inline-block;
-    cursor: pointer;
-    /* Add any additional styling you want for the hamburger */
+  .topNav {
+    padding-top: 0.5rem;
   }
   
-  /* This assumes you want to hide regular nav items when hamburger is shown */
   .topNav a {
     display: none;
-  }
-  
-  /* Show the nav items when menu is open */
-  .topNav.responsive a {
-    display: block;
-  }
-}
-
-  .topNav.responsive {
-    position: fixed;
-    width: 100%;
-  }
-
-  /* Show the links when the user clicks the hamburger button */
-  .topNav.responsive a {
-    display: block;
-    text-align: left;
     padding: 1rem;
-    font-size: 2rem;
+    width: 100%;
+    box-sizing: border-box;
   }
-
-
-  /* Default styles - hide hamburger on large screens */
-.hamburger {
-  display: none;
-}
-
-/* Show hamburger only on small screens */
-@media screen and (max-width: 768px) {
+  
   .hamburger {
     display: inline-block;
-    cursor: pointer;
-    /* Add any additional styling you want for the hamburger */
   }
   
-  /* This assumes you want to hide regular nav items when hamburger is shown */
-  .topNav a {
-    display: none;
+  /* Responsive state when menu is open */
+  .topNav.responsive {
+    background-color: rgb(42, 8, 25);
+    height: 100vh;
   }
   
-  /* Show the nav items when menu is open */
   .topNav.responsive a {
     display: block;
+    float: none;
+    text-align: left;
   }
-}
+  
+  /* Ensure scrolled state works with responsive menu */
+  .topNav.responsive.scrolled {
+    background-color: rgb(42, 8, 25);
+  }
 }

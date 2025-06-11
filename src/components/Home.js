@@ -1,7 +1,7 @@
 import React from 'react';
 import { Row, Col } from "react-bootstrap";
 import './Home.css';
-import Image from './Image.png';
+import Image from './Image.jpg';
 import github from './static/icon-github.png';
 import linkedin from './static/icon-linkedin.png';
 import instagram from './static/icon-instagram.png';
@@ -10,7 +10,7 @@ import { Button } from 'react-bootstrap';
 function Home() {
   return (
     <div className="homediv">
-        <h1 className="word-art">Dev's portfolio!!</h1>
+        <h1 className="typewriter">Hi, I am Amaldev!!</h1>
         <br></br>
         <br></br>
         <Row className="section">

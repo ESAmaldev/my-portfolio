@@ -5,7 +5,9 @@ import './Education.css';
 function Education() {
   return (
     <div className="educationdiv">
-        <h1 className="word-art">Education</h1>
+        <br></br>
+        <br></br>
+        <h1 className="fade-in">Education</h1>
 
         <Row className="section">
         <Col xs={10} md={5} xl={5} className="degree1">
@@ -37,11 +39,9 @@ function Education() {
                                     </ul>
                                 </div>
         </Col>
-    </Row>
+        </Row>
 
     
-    <br></br>
-        <br></br>
     </div>
   );
 }

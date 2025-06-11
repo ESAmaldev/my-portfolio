@@ -13,20 +13,10 @@ function App() {
       < TopNav />
   </header>
       
-          <div id="home">
             <Home />
-          </div>
-         <div id="education">
-
            <Education />
-        
-         </div>
-        
-          <div id="experience">
-
             <Experience />
         
-          </div>
         </div>
   );
 }

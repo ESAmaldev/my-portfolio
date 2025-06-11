@@ -4,9 +4,9 @@
   background-attachment: fixed;
   background-position: center; 
   background-size:cover;
-  font-style: italic;
+  font-style:normal;
   color: white;
-  background: rgb(180, 167, 175);
+  background: rgba(0, 0, 0, 0.6);
   
   }
 
@@ -29,7 +29,7 @@
   padding-top: 1rem;
   padding-bottom: 1rem;
   border-radius: 1rem;
-  background: rgb(126, 129, 125);
+    background: grey;
     
   }
 
@@ -42,7 +42,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 1rem;
-    background: rgb(126, 129, 125);
+    background: grey;
     
   }
 
@@ -55,7 +55,7 @@
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-radius: 1rem;
-    background: rgb(126, 129, 125);
+    background: grey;
     
   }
   
@@ -80,7 +80,8 @@
   
   .custom-list {
     list-style-type: square;
-    color: rgb(60, 185, 170);
+    color: rgb(131, 46, 99);
+    font-family: 'Franklin Gothic Medium';
   }
   
     /* Styling the h1 with word art animation */
