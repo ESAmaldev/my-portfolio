@@ -87,7 +87,7 @@
     /* Styling the h1 with word art animation */
 h1.word-art {
   font-family: 'Arial', sans-serif;      /* Use a simple font for the base */
-  font-size: 5rem;                      /* Adjust font size */
+  font-size: 2rem;                      /* Adjust font size */
   color: yellow;                       /* Primary color */
   text-align: center;                   /* Center the text */
   margin-top: 50px;                     /* Space it from the top */
@@ -95,6 +95,13 @@ h1.word-art {
                4px 4px 6px rgba(0, 0, 0, 0.3), /* Double shadow for depth */
                6px 6px 8px rgba(0, 0, 0, 0.2); /* Triple shadow for more depth */
   animation: wordArtAnimation 3s infinite; /* Add animation to the text */
+}
+
+@media (min-width: 768px) {
+  h1.word-art {
+    font-size: 5rem; /* Larger font on bigger screens */
+    margin: 2rem auto; /* Bigger margin */
+  }
 }
 
 /* Keyframes for text animation */

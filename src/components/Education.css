@@ -60,7 +60,7 @@
   overflow: hidden; /* Hide overflow (if needed) */
   padding: 10px;
   font-family: 'Franklin Gothic Medium';
-  font-size: 2.5rem; /* Mobile-first size */
+  font-size: 2rem; /* Mobile-first size */
   white-space: nowrap; /* Keep text in one line */
   margin: 1rem auto;
   letter-spacing: 0.15em;
