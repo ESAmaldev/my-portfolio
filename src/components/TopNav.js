@@ -24,7 +24,8 @@ const TopNav = () => {
       </span>
       <a href="#home">Home</a>
       <a href="#education">Education</a>
-      <a href="#experience">Experience</a>
+      <a href="#experience">Experience</a>      
+      <a href="#projects">Projects</a>
     </div>
   );
 };

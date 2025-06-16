@@ -1,0 +1,74 @@
+
+.projectdiv{
+
+  font-style: normal;  
+
+    width: auto;
+  font-family: 'Franklin Gothic Medium';
+    position: center;
+  text-align: center;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 20px;
+  
+  }
+
+  .projects{
+
+  padding-left: 5rem;
+  font-style: normal; 
+  border: 5rem;
+
+  font-family: 'Franklin Gothic Medium';
+    position: center;
+  text-align: center;
+    padding: 20px;
+  
+  }
+
+
+
+  .projects ul {
+  margin: 0;
+  padding: 0 0 0 1rem; /* Slight left padding for bullet alignment */
+  list-style-position: inside;
+}
+
+.projects li {
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  text-align: center; /* Ensures text aligns properly */
+}
+ 
+.fade-in {
+  overflow: hidden; /* Hide overflow (if needed) */
+  padding: 10px;
+  font-family: 'Franklin Gothic Medium';
+  font-size: 2rem; /* Mobile-first size */
+  white-space: nowrap; /* Keep text in one line */
+  margin: 1rem auto;
+  letter-spacing: 0.15em;
+  opacity: 0; /* Start invisible */
+  animation: 
+    fadeIn 1.5s ease-out forwards, /* Fade-in animation */
+    blink-caret 0.75s step-end infinite; /* Optional: Keep cursor if needed */
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Optional cursor effect (remove if not needed) */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: #000; }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+  .fade-in {
+    font-size: 5rem; /* Larger font on desktop */
+    margin: 2rem auto;
+  }
+}
