@@ -7,8 +7,9 @@ function Projects() {
     <div className="projectdiv">
         <br></br>
         <br></br>
-        <div className="projects">
+        
         <h1 className="fade-in">Projects</h1>
+        <div className="projects">
 
         <h2>SSO application for InteBloc   </h2>
         <br></br>

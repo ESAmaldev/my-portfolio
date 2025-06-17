@@ -16,8 +16,8 @@
 
   padding-left: 5rem;
   font-style: normal; 
-  border: 5rem;
-
+  border: 5rem;    
+    background: rgba(0, 0, 0, 0.2);
   font-family: 'Franklin Gothic Medium';
     position: center;
   text-align: center;

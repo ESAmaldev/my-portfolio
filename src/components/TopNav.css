@@ -9,6 +9,16 @@
   transition: background-color 0.3s ease, padding 0.3s ease;
 }
 
+.logo {
+  margin-right: auto; /* Pushes other items to the right */
+  padding: 10px 0;
+}
+
+.logo img {
+  height: 40px; /* Adjust as needed */
+  width: auto;
+}
+
 /* Scrolled state - becomes visible */
 .topNav.scrolled {
   background-color: rgb(42, 8, 25);

@@ -30,7 +30,7 @@ function Home() {
                 <br></br>
                 <br></br>
 
-                <Button href="https://drive.google.com/file/d/1Bi7ULA19-ovnnNyF1JaQmumGzKC6h6Gm/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</Button>
+                <Button href="https://drive.google.com/file/d/1u10jK7GcuxSS-bo-nJXMbjR8VaJkAXX4/view?usp=sharing" target="_blank" rel="noopener noreferrer">Resume</Button>
                 <br></br>
                 <br></br>
                 </div>

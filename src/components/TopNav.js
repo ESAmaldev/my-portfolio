@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import './TopNav.css';
 
+import Logo from './static/logo.png';
+
 const TopNav = () => {
   const [isNavOpen, setIsNavOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
@@ -19,6 +21,13 @@ const TopNav = () => {
 
   return (
     <div className={`topNav ${isNavOpen ? 'responsive' : ''} ${scrolled ? 'scrolled' : ''}`}>
+
+    <div className="logo">
+    <a href="#home">
+      <img  src={Logo} alt="My Logo" />
+    </a>
+  </div>
+
       <span className="hamburger" onClick={toggleNav}>
         &#9776;
       </span>

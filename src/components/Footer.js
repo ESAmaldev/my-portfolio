@@ -12,25 +12,18 @@ const Footer = () => {
           <div className="footer-section">
             <h3>Socials</h3>
             <div className="social-icons">
-              <a href="#"><FaGithub /></a>
-              <a href="#"><FaInstagram /></a>
-              <a href="#"><FaLinkedin /></a>
+              <a href="https://github.com/ESAmaldev"><FaGithub /></a>
+              <a href="https://www.instagram.com/amaldev_es/"><FaInstagram /></a>
+              <a href="https://www.linkedin.com/in/dev0amal/"><FaLinkedin /></a>
             </div>
           </div>
 
           {/* Quick Links */}
           <div className="footer-section">
-            <Button href="https://drive.google.com/file/d/1Bi7ULA19-ovnnNyF1JaQmumGzKC6h6Gm/view?usp=sharing" target="_blank" rel="noopener noreferrer">SEE MY RESUME</Button>
+            <Button href="https://drive.google.com/file/d/1u10jK7GcuxSS-bo-nJXMbjR8VaJkAXX4/view?usp=sharing" target="_blank" rel="noopener noreferrer">SEE MY RESUME</Button>
           </div>
 
-          {/* Contact Info */}
-          <div className="footer-section">
-            <h3>Contact Us</h3>
-            <address>
-              <p>Email: info@company.com</p>
-              <p>Phone: (123) 456-7890</p>
-            </address>
-          </div>
+         
 
           
         </div>
