@@ -1,91 +1,108 @@
-* {
+.education-container {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
+}
+
+/* Reusing timeline styles from Experience.css or defining them globally would be better, 
+   but for now, we'll duplicate or rely on global styles if we moved them. 
+   Since we didn't move them to index.css, I'll include them here for isolation. */
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: var(--spacing-lg) 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 20px;
+  width: 2px;
+  background-color: var(--border-color);
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: var(--spacing-xxl);
+  padding-left: 50px;
+}
+
+.timeline-item::before {
+  content: '';
+  position: absolute;
+  left: 11px;
+  top: 5px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  border: 4px solid var(--background-color);
+  z-index: 1;
+}
+
+.timeline-content {
+  background-color: var(--surface-color);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  border: 1px solid var(--border-color);
+  transition: transform var(--transition-normal);
+}
+
+.timeline-content:hover {
+  transform: translateX(5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.edu-header {
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: var(--spacing-sm);
+}
+
+.edu-header h3 {
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  color: var(--primary-color);
+  font-size: 1.5rem;
 }
 
-.educationdiv{
-  font-style: normal;
-  color: white;  
-  background: rgba(0, 0, 0, 0.6);
-  
-  }
-
-.degree1 {
-  flex: 1;
-  text-align: left;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-top: 5rem;  
-  margin-bottom: 5rem;
-  background: rgba(13, 64, 172, 0.5);
-  }
-  
-  .degree2 {
-    flex: 0 0 50%;  
-    text-align: left; 
-    margin-left: 2rem;
-    margin-right: 2rem;      
-    margin-top: 5rem;  
-    margin-bottom: 5rem;
-    background: rgba(170, 188, 226, 0.5);
-  }
-
-  .image {
-    height: 60%; 
-    width: 90%;
-  }
-
-  .courses {
-    margin-top: 10px;
-  }
-  
-
-  .courses p{
-    margin-bottom: 0;
-    font-size: 1.5rem;
-  }
-  .courses li{
-    font-size: 1rem !important;
-    
-    font-family: 'Cochin';
-  }
-  .uni{
-    background: linear-gradient(90.21deg, rgba(192, 188, 191, 0.5) -5.91%, rgba(95, 75, 175, 0.5) 111.58%) !important;
-    border-radius: 5px;
-    font-size: 1rem !important;
-  }
-  
-.fade-in {
-  overflow: hidden; /* Hide overflow (if needed) */
-  padding: 10px;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 2rem; /* Mobile-first size */
-  white-space: nowrap; /* Keep text in one line */
-  margin: 1rem auto;
-  letter-spacing: 0.15em;
-  opacity: 0; /* Start invisible */
-  animation: 
-    fadeIn 1.5s ease-out forwards, /* Fade-in animation */
-    blink-caret 0.75s step-end infinite; /* Optional: Keep cursor if needed */
+.edu-header h4 {
+  margin: var(--spacing-xs) 0 0;
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.courses-section h5 {
+  font-size: 1rem;
+  color: var(--text-primary);
+  margin-bottom: var(--spacing-sm);
 }
 
-/* Optional cursor effect (remove if not needed) */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #000; }
+.courses-list {
+  margin: 0;
+  padding-left: var(--spacing-lg);
+  color: var(--text-secondary);
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  .fade-in {
-    font-size: 5rem; /* Larger font on desktop */
-    margin: 2rem auto;
+.courses-list li {
+  margin-bottom: var(--spacing-xs);
+}
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .timeline::before {
+    left: 10px;
+  }
+
+  .timeline-item {
+    padding-left: 35px;
+  }
+
+  .timeline-item::before {
+    left: 1px;
   }
 }

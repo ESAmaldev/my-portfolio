@@ -1,88 +1,272 @@
-/* Base styling for the topNav */
+/* CSS Variables for theming */
+:root {
+  --nav-gradient-start: #667eea;
+  --nav-gradient-mid: #764ba2;
+  --nav-gradient-end: #f093fb;
+  --nav-text: rgba(255, 255, 255, 0.95);
+  --nav-text-hover: #ffd89b;
+  --nav-bg-overlay: rgba(255, 255, 255, 0.1);
+  --nav-shadow: rgba(102, 126, 234, 0.4);
+  --nav-accent: #ffd89b;
+}
+
+html.dark-mode {
+  --nav-gradient-start: #0a0a0a;
+  --nav-gradient-mid: #1a1a1a;
+  --nav-gradient-end: #000000;
+  --nav-text: rgba(255, 255, 255, 1);
+  --nav-text-hover: #60a5fa;
+  --nav-bg-overlay: rgba(255, 255, 255, 0.1);
+  --nav-shadow: rgba(0, 0, 0, 0.8);
+  --nav-accent: #60a5fa;
+}
+
 .topNav {
-  background-color: transparent;
+  background: linear-gradient(135deg, var(--nav-gradient-start) 0%, var(--nav-gradient-mid) 50%, var(--nav-gradient-end) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   position: fixed;
-  padding-top: 1rem;
   width: 100%;
+  height: 70px;
   z-index: 1000;
-  top: 0;
-  transition: background-color 0.3s ease, padding 0.3s ease;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 var(--spacing-xl);
+  box-shadow: 0 4px 20px var(--nav-shadow);
+  transition: all var(--transition-normal);
+  box-sizing: border-box;
 }
 
-.logo {
-  margin-right: auto; /* Pushes other items to the right */
-  padding: 10px 0;
-}
-
-.logo img {
-  height: 40px; /* Adjust as needed */
-  width: auto;
-}
-
-/* Scrolled state - becomes visible */
 .topNav.scrolled {
-  background-color: rgb(42, 8, 25);
-  padding: 0.5rem 0; /* Slightly reduce padding when scrolled */
+  box-shadow: 0 6px 25px var(--nav-shadow);
+  height: 60px;
 }
 
-.topNav a {
-  float: inline-start;
-  text-align: left;
-  padding: 1rem 4rem;
-  font-size: 2rem;
-  color: white;
+.nav-brand a {
+  font-size: 1.75rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #ffffff, var(--nav-accent));
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
   text-decoration: none;
-  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+  transition: all var(--transition-fast);
 }
 
-.topNav a:hover {
-  background-color: #ddd;
-  color: black;
+.nav-brand a:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(255, 255, 255, 0.6));
 }
 
-/* Hamburger menu icon */
+.nav-links {
+  display: flex;
+  gap: var(--spacing-lg);
+  align-items: center;
+}
+
+.nav-links a {
+  color: var(--nav-text);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
+  position: relative;
+  transition: all var(--transition-fast);
+  border-radius: 8px;
+}
+
+/* Animated Underline */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 3px;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, var(--nav-accent), var(--nav-gradient-end));
+  transition: width var(--transition-fast);
+  border-radius: 3px;
+  box-shadow: 0 2px 8px var(--nav-accent);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--nav-text-hover);
+  background: var(--nav-bg-overlay);
+  transform: translateY(-2px);
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 100%;
+}
+
+/* Navigation Actions Container */
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+/* Theme Toggle Button */
+.theme-toggle {
+  background: var(--nav-bg-overlay);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+  padding: 0;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: var(--nav-accent);
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 4px 15px var(--nav-accent);
+}
+
+.theme-toggle:active {
+  transform: scale(0.95);
+}
+
+.theme-toggle-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+}
+
+.theme-toggle-icon svg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: var(--nav-text);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Sun Icon (visible in light mode) */
+.theme-toggle.light .sun-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+.theme-toggle.light .moon-icon {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
+
+/* Moon Icon (visible in dark mode) */
+.theme-toggle.dark .sun-icon {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+
+.theme-toggle.dark .moon-icon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
+/* Hamburger Menu */
 .hamburger {
   display: none;
-  color: white;
-  font-size: 2.5rem;
-  padding: 0.5rem 1rem;
   cursor: pointer;
+  width: 30px;
+  height: 20px;
+  position: relative;
+  z-index: 1001;
+}
+
+.hamburger span {
+  display: block;
   position: absolute;
-  right: 0;
-  top: 0;
+  height: 3px;
+  width: 100%;
+  background: #ffffff;
+  border-radius: 3px;
+  opacity: 1;
+  left: 0;
+  transform: rotate(0deg);
+  transition: .25s ease-in-out;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.hamburger span:nth-child(1) {
+  top: 0px;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger.open span:nth-child(1) {
+  top: 9px;
+  transform: rotate(135deg);
+}
+
+.hamburger.open span:nth-child(2) {
+  opacity: 0;
+  left: -60px;
+}
+
+.hamburger.open span:nth-child(3) {
+  top: 9px;
+  transform: rotate(-135deg);
 }
 
 /* Mobile styles */
 @media screen and (max-width: 768px) {
   .topNav {
-    padding-top: 0.5rem;
+    padding: 0 var(--spacing-md);
   }
-  
-  .topNav a {
-    display: none;
-    padding: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-  }
-  
+
   .hamburger {
-    display: inline-block;
-  }
-  
-  /* Responsive state when menu is open */
-  .topNav.responsive {
-    background-color: rgb(42, 8, 25);
-    height: 100vh;
-  }
-  
-  .topNav.responsive a {
     display: block;
-    float: none;
-    text-align: left;
   }
-  
-  /* Ensure scrolled state works with responsive menu */
-  .topNav.responsive.scrolled {
-    background-color: rgb(42, 8, 25);
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 70%;
+    height: 100vh;
+    background: linear-gradient(135deg, var(--nav-gradient-start) 0%, var(--nav-gradient-mid) 50%, var(--nav-gradient-end) 100%);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--spacing-xl);
+    box-shadow: -5px 0 30px var(--nav-shadow);
+    transition: right var(--transition-normal);
+    padding: var(--spacing-xl);
+  }
+
+  .nav-links.show {
+    right: 0;
+  }
+
+  .nav-links a {
+    font-size: 1.5rem;
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+  }
+
+  .nav-links a:hover {
+    background: var(--nav-bg-overlay);
+    transform: scale(1.05);
   }
 }

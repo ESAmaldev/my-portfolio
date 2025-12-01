@@ -1,10 +1,11 @@
 .App
 {	 
-  
+  /* 
   background-image: url("https://images.unsplash.com/photo-1525164321265-4ac01cd348c6") ;
-  
+   */
   background-position: center; 
   background-size:cover;
+  background: rgba(0, 0, 0, 0.6);
   
      
   

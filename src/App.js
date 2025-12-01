@@ -1,42 +1,25 @@
-import './App.css';
-import TopNav from './components/TopNav';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Layout from './components/Layout';
 import Home from './components/Home';
 import Education from './components/Education';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
-import Footer from './components/Footer';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import './App.css';
 
 function App() {
   return (
-    
-    <div className="App">
-      <header>
-      < TopNav />
-  </header>
-       
-       <div id="home">
-            <Home />
-            </div>
-
-
-             <div id="education">
-                <Education />
-              </div>
-
-
-        
-
-
-          <div id="experience">
-            <Experience />
-          </div>
-
-          <div id="projects">
-            <Projects />
-          </div>
-          <Footer />
-        </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="education" element={<Education />} />
+          <Route path="experience" element={<Experience />} />
+          <Route path="projects" element={<Projects />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 

@@ -1,74 +1,98 @@
+.projects-container {
+  padding: var(--spacing-xl) 0;
+  min-height: 80vh;
+}
 
-.projectdiv{
-
-  font-style: normal;  
-
-    width: auto;
-  font-family: 'Franklin Gothic Medium';
-    position: center;
+.section-title {
+  font-size: 2.5rem;
   text-align: center;
-    background: rgba(0, 0, 0, 0.3);
-    padding: 20px;
-  
-  }
-
-  .projects{
-
-  padding-left: 5rem;
-  font-style: normal; 
-  border: 5rem;    
-    background: rgba(0, 0, 0, 0.2);
-  font-family: 'Franklin Gothic Medium';
-    position: center;
-  text-align: center;
-    padding: 20px;
-  
-  }
-
-
-
-  .projects ul {
-  margin: 0;
-  padding: 0 0 0 1rem; /* Slight left padding for bullet alignment */
-  list-style-position: inside;
+  margin-bottom: var(--spacing-xxl);
+  color: var(--text-primary);
+  position: relative;
 }
 
-.projects li {
-  margin-bottom: 0.5rem;
-  line-height: 1.4;
-  text-align: center; /* Ensures text aligns properly */
-}
- 
-.fade-in {
-  overflow: hidden; /* Hide overflow (if needed) */
-  padding: 10px;
-  font-family: 'Franklin Gothic Medium';
-  font-size: 2rem; /* Mobile-first size */
-  white-space: nowrap; /* Keep text in one line */
-  margin: 1rem auto;
-  letter-spacing: 0.15em;
-  opacity: 0; /* Start invisible */
-  animation: 
-    fadeIn 1.5s ease-out forwards, /* Fade-in animation */
-    blink-caret 0.75s step-end infinite; /* Optional: Keep cursor if needed */
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background-color: var(--primary-color);
+  margin: var(--spacing-sm) auto 0;
+  border-radius: 2px;
 }
 
-/* Fade-in animation */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
 }
 
-/* Optional cursor effect (remove if not needed) */
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: #000; }
+.project-card {
+  background-color: var(--surface-color);
+  border-radius: 12px;
+  box-shadow: var(--shadow-md);
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
 }
 
-/* Responsive adjustments */
-@media (min-width: 768px) {
-  .fade-in {
-    font-size: 5rem; /* Larger font on desktop */
-    margin: 2rem auto;
-  }
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.project-content {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.project-content h3 {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--text-primary);
+}
+
+.project-content p {
+  color: var(--text-secondary);
+  margin-bottom: var(--spacing-md);
+  flex-grow: 1;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  margin-bottom: var(--spacing-md);
+}
+
+.tag {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  padding: 4px 12px;
+  border-radius: 16px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.project-links {
+  display: flex;
+  gap: var(--spacing-md);
+  margin-top: auto;
+}
+
+.project-links a {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.project-links a:hover {
+  color: var(--primary-color);
 }

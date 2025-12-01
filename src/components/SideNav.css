@@ -1,0 +1,51 @@
+.sideNav {
+  background-color: var(--surface-color);
+  position: fixed;
+  height: 100vh;
+  width: 15rem;
+  /* Fixed width */
+  z-index: 900;
+  padding-top: 80px;
+  /* Space for TopNav */
+  border-right: 1px solid var(--border-color);
+  display: flex;
+  flex-direction: column;
+  transition: transform var(--transition-normal);
+}
+
+.sideNav-links {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.sideNav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  padding: var(--spacing-md);
+  border-radius: 8px;
+  transition: all var(--transition-fast);
+  display: flex;
+  align-items: center;
+}
+
+.sideNav-links a:hover {
+  background-color: var(--background-color);
+  color: var(--primary-color);
+  transform: translateX(5px);
+}
+
+.sideNav-links a.active {
+  background-color: rgba(37, 99, 235, 0.1);
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+/* Hide SideNav on mobile, rely on TopNav */
+@media screen and (max-width: 768px) {
+  .sideNav {
+    transform: translateX(-100%);
+  }
+}
