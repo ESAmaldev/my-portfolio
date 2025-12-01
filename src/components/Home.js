@@ -31,7 +31,7 @@ const Home = () => {
           </div>
 
           <div className="cta-buttons">
-            <a className="btn btn-outline" style={{backgroundColor:"rgba(67, 221, 221, 0.81)"}} href="https://drive.google.com/file/d/1u10jK7GcuxSS-bo-nJXMbjR8VaJkAXX4/view?usp=sharing" target="_blank" rel="noopener noreferrer">View CV</a>
+            <a className="btn btn-outline" style={{backgroundColor:"rgba(67, 221, 221, 0.81)"}} href="https://drive.google.com/file/d/1TQuFc5wBLYtFXuY5JrtLIU1cA34eLdg6/view?usp=sharing" target="_blank" rel="noopener noreferrer">View CV</a>
            
           </div>
         </div>
