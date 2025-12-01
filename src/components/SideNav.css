@@ -2,10 +2,10 @@
   background-color: var(--surface-color);
   position: fixed;
   height: 100vh;
-  width: 15rem;
+  width: 10rem;
   /* Fixed width */
   z-index: 900;
-  padding-top: 80px;
+  padding-top: 5rem;
   /* Space for TopNav */
   border-right: 1px solid var(--border-color);
   display: flex;

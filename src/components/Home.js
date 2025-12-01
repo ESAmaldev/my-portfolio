@@ -5,15 +5,15 @@ import { FaGithub, FaLinkedin, FaEnvelope } from 'react-icons/fa';
 const Home = () => {
   return (
     <div className="home-container">
-      <div className="hero-section">
-        <div className="hero-content">
-          <h1 className="hero-title">
-            Hello, I'm <span className="highlight">Amaldev</span>
+      <div className="profile-section">
+        <div className="profile-content">
+          <h1 className="profile-title">
+            Hello, I'm <span className="highlight">AmalDev</span>
           </h1>
           <div className="typewriter">
             <h2>Full Stack Developer</h2>
           </div>
-          <p className="hero-description">
+          <p className="profile-description">
             Passionate about building scalable web applications and solving complex problems.
             Let's build something amazing together.
           </p>
@@ -36,7 +36,7 @@ const Home = () => {
           </div>
         </div>
 
-        <div className="hero-image">
+        <div className="profile-image">
           {/* Placeholder for profile image if available, or a nice illustration */}
           <div className="profile-placeholder">
             <span>AD</span>

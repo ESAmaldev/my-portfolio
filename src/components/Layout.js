@@ -9,12 +9,12 @@ const Layout = () => {
       <TopNav />
       <SideNav />
       <div style={{ 
-        paddingLeft: 'var(--spacing-xxl)', /* Adjusted for SideNav */
-        paddingTop: '60px', /* Adjusted for TopNav */
+        paddingLeft: '10rem', /* Adjusted for SideNav */
+        paddingTop: '3.75rem', /* Adjusted for TopNav */
         minHeight: '100vh',
         backgroundColor: 'var(--background-color)'
       }}>
-        <div style={{ maxWidth: '1200px', margin: '0 auto', padding: 'var(--spacing-lg)' }}>
+        <div style={{  margin: '0 auto', padding: 'var(--spacing-lg)' }}>
           <Outlet />
         </div>
       </div>

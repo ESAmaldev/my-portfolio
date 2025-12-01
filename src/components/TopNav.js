@@ -23,7 +23,7 @@ const TopNav = () => {
   return (
     <nav className={`topNav ${isNavOpen ? 'responsive' : ''} ${scrolled ? 'scrolled' : ''} `}>
       <div className="nav-brand">
-        <NavLink to="/" end>DEV's</NavLink>
+        <NavLink to="/" end>AmalDev</NavLink>
       </div>
 
       <div className={`nav-links ${isNavOpen ? 'show' : ''} `}>
