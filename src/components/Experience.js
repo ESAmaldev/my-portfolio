@@ -37,17 +37,6 @@ const experienceData = [
         ]
     },
     {
-        role: "Application Support Engineer",
-        company: "Reflexis (Zebra)",
-        techStack: "Shell, SQL, JIRA, IBM Cognos, RDS, Solaris",
-        points: [
-            "Resolved alerts and issues promptly, minimizing disruptions and preventing outages by 40%",
-            "Automated tasks using Bash shell scripting, enhancing efficiency in system administration",
-            "Conducted stakeholder meetings and used JIRA to track tickets and document actions",
-            "Developed optimized SQL queries, improving system stability and performance by 30%"
-        ]
-    },
-    {
         role: "Software Developer",
         company: "Reflexis (Zebra)",
         techStack: "Java, Spring Boot, JUnit, SQL, SVN",
